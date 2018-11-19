@@ -122,6 +122,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -173,6 +177,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -222,6 +230,10 @@
                 if  ($WorkGubun == 39) // 메가박스
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                 }
                 if  ($nFilmTypeNo != "0")
                 {
@@ -344,6 +356,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -395,6 +411,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -444,6 +464,10 @@
                 if  ($WorkGubun == 39) // 메가박스
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                 }
                 if  ($nFilmTypeNo != "0")
                 {
@@ -546,6 +570,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -606,6 +634,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -665,6 +697,10 @@
                 if  ($WorkGubun == 39) // 메가박스
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                 }
                 if  ($nFilmTypeNo != "0")
                 {
@@ -788,6 +824,10 @@
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
                     }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                    }
                     if  ($nFilmTypeNo != "0")
                     {
                         $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -860,6 +900,10 @@
                     if  ($WorkGubun == 39) // 메가박스
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                    }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                     }
                     if  ($nFilmTypeNo != "0")
                     {
@@ -979,6 +1023,10 @@
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
                     }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                    }
                     if  ($nFilmTypeNo != "0")
                     {
                         $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -1028,6 +1076,10 @@
                     if  ($WorkGubun == 39) // 메가박스
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                    }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                     }
                     if  ($nFilmTypeNo != "0")
                     {
@@ -1091,6 +1143,10 @@
                     if  ($WorkGubun == 39) // 메가박스
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                    }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                     }
                     if  ($nFilmTypeNo != "0")
                     {
@@ -1224,6 +1280,10 @@
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
                     }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                    }
                     if  ($nFilmTypeNo != "0")
                     {
                         $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -1274,6 +1334,10 @@
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
                     }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                    }
                     if  ($nFilmTypeNo != "0")
                     {
                         $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -1323,6 +1387,10 @@
                     if  ($WorkGubun == 39) // 메가박스
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                    }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                     }
                     if  ($nFilmTypeNo != "0")
                     {
@@ -1445,6 +1513,10 @@
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
                     }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                    }
                     if  ($nFilmTypeNo != "0")
                     {
                         $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -1494,6 +1566,10 @@
                     if  ($WorkGubun == 39) // 메가박스
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                    }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                     }
                     if  ($nFilmTypeNo != "0")
                     {
@@ -1558,6 +1634,10 @@
                     if  ($WorkGubun == 39) // 메가박스
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                    }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                     }
                     if  ($nFilmTypeNo != "0")
                     {
@@ -1679,6 +1759,10 @@
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
                     }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                    }
                     if  ($nFilmTypeNo != "0")
                     {
                         $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -1729,6 +1813,10 @@
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
                     }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                    }
                     if  ($nFilmTypeNo != "0")
                     {
                         $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -1778,6 +1866,10 @@
                     if  ($WorkGubun == 39) // 메가박스
                     {
                         $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                    }
+                    if  ($WorkGubun == 56) // 기타
+                    {
+                        $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                     }
                     if  ($nFilmTypeNo != "0")
                     {
@@ -1902,6 +1994,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -1952,6 +2048,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -2001,6 +2101,10 @@
                 if  ($WorkGubun == 39) // 메가박스
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                 }
                 if  ($nFilmTypeNo != "0")
                 {
@@ -2091,6 +2195,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -2141,6 +2249,10 @@
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
                 }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
+                }
                 if  ($nFilmTypeNo != "0")
                 {
                     $sQuery .= " And singo.FilmType  = '".$nFilmTypeNo."' " ;
@@ -2189,6 +2301,10 @@
                 if  ($WorkGubun == 39) // 메가박스
                 {
                     $sQuery .= " And showroom.MultiPlex  = '3' " ;
+                }
+                if  ($WorkGubun == 56) // 기타
+                {
+                    $sQuery .= " And (showroom.MultiPlex <> '4' and showroom.MultiPlex <> '5' and showroom.MultiPlex <> '3' and showroom.MultiPlex <> '2') " ;
                 }
                 if  ($nFilmTypeNo != "0")
                 {

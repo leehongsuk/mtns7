@@ -118,7 +118,8 @@
                       (write.Gubun.value ==  1) || (write.Gubun.value == 27) ||
                       (write.Gubun.value == 28) || (write.Gubun.value == 33) ||
                       (write.Gubun.value == 34) || (write.Gubun.value == 37) ||
-                      (write.Gubun.value == 39) || (write.Gubun.value == 29)
+                      (write.Gubun.value == 39) || (write.Gubun.value == 29) ||
+                      (write.Gubun.value == 56)
                     )
                 {
                     if  ( ((write.FilmTile.value   == 0) || (write.FilmTile.value   == -1)) &&
@@ -414,7 +415,8 @@
                         (write.Gubun.value == 45) ||
                         (write.Gubun.value == 47) ||
                         (write.Gubun.value == 51) ||
-                        (write.Gubun.value == 52))
+                        (write.Gubun.value == 52) ||
+                        (write.Gubun.value == 56))
                     {
                         var sample = document.getElementsByName('bFilmTypeNo');
 
@@ -2642,8 +2644,9 @@
                       (item.value=="13") || (item.value=="27") || (item.value=="28") ||
                       (item.value=="29") || (item.value=="33") || (item.value=="34") ||
                       (item.value=="37") || (item.value=="39") || (item.value=="31") ||
-                      (item.value=="35") || (item.value=="43") || (item.value=="44")  ||
-                      (item.value=="45") || (item.value=="48") || (item.value=="50")
+                      (item.value=="35") || (item.value=="43") || (item.value=="44") ||
+                      (item.value=="45") || (item.value=="48") || (item.value=="50") ||
+                      (item.value=="56")
                     )
                 {
                     strScript   = "<select name=CurrYear>" ;
@@ -2910,7 +2913,8 @@
                      ( item.value=="40") ||
                      ( item.value=="45") ||
                      ( item.value=="51") ||
-                     ( item.value=="52"))
+                     ( item.value=="52") ||
+                     ( item.value=="56"))
 
                 {
                     //alert($("#selFilmTile").val());
@@ -3078,6 +3082,9 @@
 
                                   if  ($WorkGubun == 39) echo "<option value=39  selected>당일회차별현황(메가박스)</option>" ;
                                   else                   echo "<option value=39>당일회차별현황(메가박스)</option>" ;
+
+                                  if  ($WorkGubun == 56) echo "<option value=56 selected>당일회차별현황(기타)</option>" ;
+                                  else                   echo "<option value=56>당일회차별현황(기타)</option>" ;
 
                                   if  ($TimJang == false) // 이부장..
                                   {
@@ -3395,7 +3402,8 @@
                               ($WorkGubun==7) ||
                               ($WorkGubun==26)||
                               ($WorkGubun==38)||
-                              ($WorkGubun==40) )
+                              ($WorkGubun==40)||
+                              ($WorkGubun==56) )
                         {
                             $bChk0  = "" ;
                             $bChk35 = "" ;

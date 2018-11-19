@@ -1,8 +1,8 @@
 <?
+    //
     $xmlObj = new xmlWriter();
     $xmlObj->openMemory();
-    
-     
+      
     $xmlObj->startDocument('1.0','euc-kr');
     $xmlObj->startElement ('Root'); 
     

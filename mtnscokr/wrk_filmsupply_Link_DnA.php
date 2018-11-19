@@ -581,6 +581,10 @@
               {
                   $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
               }
+              if  ($WorkGubun == 56) // 기타
+              {
+                  $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
+              }
 
               $sQuery = "Select Singo.RoomOrder,                         ".
                         "       Singo.Theather,                          ".
@@ -686,6 +690,10 @@
               {
                   $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
               }
+              if  ($WorkGubun == 56) // 기타
+              {
+                  $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
+              }
 
               $sQuery = "Select Singo.RoomOrder,                         ".
                         "       Singo.Theather,                          ".
@@ -790,6 +798,10 @@
            if  ($WorkGubun == 39) // 메가박스
            {
                $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
+           }
+           if  ($WorkGubun == 56) // 기타
+           {
+               $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
            }
 
            $sQuery = "Select Singo.RoomOrder,                         ".
@@ -910,6 +922,10 @@
                {
                    $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
                }
+               if  ($WorkGubun == 56) // 기타
+               {
+                   $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
+               }
 
                $sQuery = "Select Singo.RoomOrder,                         ".
                          "       Singo.Theather,                          ".
@@ -1026,6 +1042,10 @@
                if  ($WorkGubun == 39) // 메가박스
                {
                    $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
+               }
+               if  ($WorkGubun == 56) // 기타
+               {
+                   $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
                }
 
                $sQuery = "Select Singo.RoomOrder,                         ".
@@ -1147,6 +1167,10 @@
                {
                    $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
                }
+               if  ($WorkGubun == 56) // 기타
+               {
+                   $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
+               }
 
                $sQuery = "Select Singo.RoomOrder,                         ".
                          "       Singo.Theather,                          ".
@@ -1263,6 +1287,10 @@
                {
                    $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
                }
+               if  ($WorkGubun == 56) // 기타
+               {
+                   $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
+               }
 
                $sQuery = "Select Singo.RoomOrder,                         ".
                          "       Singo.Theather,                          ".
@@ -1378,6 +1406,10 @@
                if  ($WorkGubun == 39) // 메가박스
                {
                    $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
+               }
+               if  ($WorkGubun == 56) // 기타
+               {
+                   $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
                }
 
                $sQuery = "Select Singo.RoomOrder,                         ".
@@ -1498,6 +1530,10 @@
            if  ($WorkGubun == 39) // 메가박스
            {
                $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
+           }
+           if  ($WorkGubun == 56) // 기타
+           {
+               $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
            }
 
            $sQuery = "Select Singo.RoomOrder,                         ".
@@ -1656,6 +1692,10 @@
            {
                $AddedCont .= " And Showroom.MultiPlex  = '3' " ;
            }
+           if  ($WorkGubun == 56) // 기타
+           {
+               $AddedCont .= " And (Showroom.MultiPlex <> '4' and Showroom.MultiPlex <> '5' and Showroom.MultiPlex <> '3' and Showroom.MultiPlex <> '2') " ;
+           }
 
            if  ($AddedCont != "") // 해당하는 자료가 있는경우..
            {
@@ -1694,7 +1734,7 @@
                          "       Showroom.Seat As ShowRoomSeat,           \n".
                          "       FilmTitle.Name As FilmTitleName,         \n".
                          "       FilmTitle.ExcelTitle As ExcelTitle,      \n".
-                         "       Silmooja.Name	As SilmoojaName,           \n".
+                         "       Silmooja.Name	As SilmoojaName,          \n".
                          "       Sum(Singo.NumPersons) As SumNumPersons,  \n".
                          "       Count(distinct ShowDgree) As CntDgree    \n".
                          "  From ".$sSingoName."   As Singo,              \n".
@@ -1708,16 +1748,16 @@
                          "   And Singo.Room       = Showroom.Room         \n".
                          "   And Singo.Location   = Location.Code         \n".
                          "   And Singo.Open       = FilmTitle.Open        \n".
-                         "   And Singo.Film       = FilmTitle.Code	       \n".
-                         $AddedCont                                        .
-                         " Group By Singo.Theather,                       \n".
+                         "   And Singo.Film       = FilmTitle.Code	      \n".
+                         $AddedCont                                     ."\n".
+                         "  Group By Singo.Theather,                      \n".
                          "          Singo.Room,                           \n".
                          "          Singo.Open,                           \n".
                          "          Singo.Film,                           \n".
                          "          Singo.FilmType,                       \n".
                          "          Singo.Silmooja ,                      \n".
                          "          Showroom.Discript                     \n".
-                         $OrderCont                                         ;
+                         $OrderCont                                     ."\n" ;
 //eq($sQuery);
                $QrySingo = mysql_query($sQuery,$connect) ;
                $filmtitleNameTitle = "" ; // 두번이상 반복되면 영화명을 지우기 위해 ..
