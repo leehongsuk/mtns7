@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="http://localhost/" href="start.jnlp">
+  <information>
+     <title>JNLP Test</title>
+     <vendor>Java Source and Support, Inc.</vendor>
+     <homepage href="http://www.java2s.com" />
+     <description>Demonstration of JNLP</description>
+  </information>
+  <resources>
+     <j2se version="1.2+" />
+     <jar href="JNLPTest.jar"/>
+  </resources>
+  <application-desc main-class="JNLPTest" />
+</jnlp>

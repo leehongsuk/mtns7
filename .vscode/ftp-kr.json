@@ -1,0 +1,16 @@
+{
+    "host": "mtns7.co.kr",
+    "username": "mtns",
+    "password": "mtns0922",
+    "remotePath": "/",
+    "protocol": "ftp",
+    "port": 0,
+    "fileNameEncoding": "EUC-KR",
+    "autoUpload": true,
+    "autoDelete": true,
+    "autoDownload": true,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}

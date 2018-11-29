@@ -1,0 +1,6 @@
+<cross-domain-policy> 
+   <allow-access-from domain="*" to-ports="*" /> 
+   <allow-access-from domain="*" to-ports="3306" /> 
+   <allow-access-from domain="www.mtns7.co.kr" to-ports="*" /> 
+   <allow-access-from domain="www.mtns7.co.kr" to-ports="3306" /> 
+</cross-domain-policy> 

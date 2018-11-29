@@ -1,0 +1,40 @@
+  /* CSS file */
+  global
+  {
+	fontFamily: "굴림체" ;
+	fontSize: 12;
+  }	
+  Panel
+  { 
+	cornerRadius: 0;
+	headerHeight: 7;
+	borderThickness: 0;
+	shadowDistance: 0;
+	shadowDirection: right;
+	roundedBottomCorners: false;
+	backgroundAlpha: 0.36;
+	borderAlpha: 0.19;
+	borderThicknessLeft: 5;
+	borderThicknessRight: 5;
+	highlightAlphas: 0.43, 0.38;
+	borderStyle: none;
+  } 
+  Legend
+  {
+    borderStyle : none ;
+    labelPlacement :right ;
+    markerHeight:15;
+    markerWidth:10;
+    paddingLeft:0;
+    paddingRight:0;
+    verticalGap:0;
+  }
+	ApplicationControlBar {
+	   cornerRadius: 2;
+ 	   dropShadowEnabled: true;
+	   shadowDistance: 1;
+	   shadowDirection: right;
+	   highlightAlphas: 0.32, 0.01;
+	   fillAlphas: 0, 0.14;
+	   backgroundAlpha: 0.98;
+	}

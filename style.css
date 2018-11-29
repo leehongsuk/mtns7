@@ -1,0 +1,12 @@
+body,td,div,center,pre,blockquote {BORDER: #eeeeee 1pt dot;font-size:9pt; font-family:±¼¸²; color:#F8FAFC;line-height:180%}
+select,input,form,textarea,option {BORDER: #eeeeee 1pt dot;font-size:9pt; font-family:±¼¸²; color:#1F2836;line-height:150%}
+
+  A  { color:white ; text-decoration:underline}
+  td { background:transparent;  font-size:9pt; font-face:"±¼¸²"; color:white  ;text-decoration:none}
+
+.tbltitle {background:#605093}
+.tblsum   {background:#7666A9}
+.textarea {background:transparent; color:#EEF5F9; border:1 solid #EEF5F9; overflow:auto}
+.input    {color:#000000; border:1 solid #EEF5F9; }
+.line {background-color:#EEF5F9; height:1}
+
