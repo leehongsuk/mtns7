@@ -6,7 +6,7 @@
     "protocol": "ftp",
     "port": 0,
     "fileNameEncoding": "EUC-KR",
-    "autoUpload": false,
+    "autoUpload": true,
     "autoDelete": false,
     "autoDownload": false,
     "ignore": [
