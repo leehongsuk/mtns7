@@ -7,7 +7,9 @@
 
     $connect = mysql_connect( "localhost", "mtns",     "5421")  or  Error("DB 접속시 에러가 발생했습니다");
 
-    mysql_select_db($db,  $connect) ;
+	mysql_select_db($db,  $connect) ;
+	
+	$today = date("Y-m-d");
 
     $page_num = 30 ;
 
@@ -53,9 +55,20 @@
     <head>
 		<script type="text/javascript" src="./js/jquery-1.8.3.js"></script>
 
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+		<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>  
+
         <Script Language="JavaScript">
         <!--
+
 			$(document).ready(function(){
+				$( ".dateStart" ).datepicker({
+                    onSelect: function(dateText) { 
+                        changingValue(this.theater);
+                    } 
+                });
+				$( ".dateStart" ).datepicker("option", "dateFormat", "yy-mm-dd" );
+                $( ".dateStart" ).datepicker("setDate", "<?=$today?>" );
 			});
 
 			function Select_Page()
@@ -81,17 +94,20 @@
 				alert($("#"+textbox).val());
 			}
 
-
-			function check(id,code)
+			// 극장기금변경을 위한 ajax 호출...
+			function changingValue(code)
 			{
+				//alert(code);
 				var options = {
-                    _Code: code,
-                    _Value: ($("#"+id).is(":checked") == true) ? 1.03 : 1.0
+                    _Code     : code,
+                    _DateSart : $("#date"+code).val(),
+                    _Value    : ($("#chk"+code).is(":checked") == true) ? 1.03 : 1.0
                 } ;
 
 				$.post("./wrk_filmsupply_Link_DnTheatherInfo_set.php", options, function(data)
                 {
                     //alert(data) ;
+					//console.log(data)
                 });
 			}
 
@@ -140,6 +156,7 @@
 		<tr bgcolor="#ffffff">
 			<th>지역</th>
 			<th>극장명</th>
+			<th>적용일</th>
 			<th>기금적용</th>
 		</tr>
 
@@ -177,12 +194,14 @@
 				<td style="padding-left: 10px;"><?=$Location?></td>
 				<td style="padding-left: 10px;"><?=$Discript?></td>
 				<td align="center">
-				<?
-				if  ($GikumRate == 1.03) $chk = "checked=\"checked\"" ;
-			    else                     $chk = "" ;
-				?>
-				<input id="chk<?=$Code?>" type="checkbox" <?=$chk?> onClick="check('chk<?=$Code?>','<?=$Code?>');" >
-
+					<input id="date<?=$Code?>" theater="<?=$Code?>" name="dateStart" class="dateStart" type="text" style="width:80px" onChange="changingValue('<?=$Code?>');"  readonly>
+				</td>
+				<td align="center">
+					<?
+					if  ($GikumRate == 1.03) $chk = "checked=\"checked\"" ;
+					else                     $chk = "" ;
+					?>
+					<input id="chk<?=$Code?>" type="checkbox" <?=$chk?> onClick="_changingValue('<?=$Code?>');" >
 				</td>
 			</tr>
 			<?
