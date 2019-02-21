@@ -505,13 +505,13 @@
                             <td style="vertical-align: top;" class="ty2"><?=$Lst_CntInning?></td> <!--회차수-->
                             <td style="vertical-align: top;" class="ty2"><?=$Lst_TotalSeat?></td> <!--총좌석수-->
                             <td style="vertical-align: top;" class="ty2"><?=$Lst_BookingRate?></td><!--예매율-->
-                            <?
-							$sumArray[$i*5+0] += ($numRoom>0)?1:0 ;
-                            $sumArray[$i*5+1] += $numRoom ;
-                            $sumArray[$i*5+2] += $sumSumSeat ;
-                            $sumArray[$i*5+3] += $sumInningTot ;
-                            $sumArray[$i*5+4] += $sumInningAct ;
-                            $sumArray[$i*5+5] += $sumTotalSeat ;
+                            <?                            
+							$sumArray[$i*6+0] += ($numRoom>0)?1:0 ;
+                            $sumArray[$i*6+1] += $numRoom ;
+                            $sumArray[$i*6+2] += $sumSumSeat ;
+                            $sumArray[$i*6+3] += $sumInningTot ;
+                            $sumArray[$i*6+4] += $sumInningAct ;
+                            $sumArray[$i*6+5] += $sumTotalSeat ;
 
                         } // for ($i = 0 ; $i < sizeof($arrCode) ; $i++)
                         ?>
@@ -528,14 +528,14 @@
                 for ($i = 0 ; $i < sizeof($arrCode) ; $i++)
                 {
                     ?>
-                    <td><?=$sumArray[$i*5+1]?></td> <!--상영관명-->
-                    <td colspan="20"><?=$sumArray[$i*5+2]?></td> <!--상영시간표들-->
-                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*5+3]?>[<?=$sumArray[$i*5+4]?>]</td> <!--회차수-->
-                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*5+5]?></td> <!--총좌석수-->
+                    <td><?=$sumArray[$i*6+1]?></td> <!--스크린수-->
+                    <td colspan="20"><?=$sumArray[$i*6+2]?></td> <!--상영시간표들-->
+                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*6+3]?>[<?=$sumArray[$i*6+4]?>]</td> <!--회차수-->
+                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*6+5]?></td> <!--총좌석수-->
                     <?
-                    if  ($sumArray[$i*5+5] != 0)
+                    if  ($sumArray[$i*6+5] != 0)
                     {
-                        ?><td style="vertical-align: top;" class="ty2"><?=number_format(round( ($sumArray[$i*5+5] - $sumArray[$i*5+2]) / $sumArray[$i*5+5] * 100.0, 1),1)?>%</td><!--예매율--><?
+                        ?><td style="vertical-align: top;" class="ty2"><?=number_format(round( ($sumArray[$i*6+5] - $sumArray[$i*6+2]) / $sumArray[$i*6+5] * 100.0, 1),1)?>%</td><!--예매율--><?
                     }
                     else
                     {
@@ -587,15 +587,15 @@
                         <?
                     }
                     ?>
-					<td><?=$sumArray[$i*5+0]?></td> <!--극장수-->
-                    <td><?=$sumArray[$i*5+1]?></td> <!--스크린수-->
-                    <td><?=$sumArray[$i*5+2]?></td> <!--상영시간표들-->
-                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*5+3]?>[<?=$sumArray[$i*5+4]?>]</td> <!--회차수-->
-                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*5+5]?></td> <!--총좌석수-->
+					<td><?=$sumArray[$i*6+0]?></td> <!--극장수-->
+                    <td><?=$sumArray[$i*6+1]?></td> <!--스크린수-->
+                    <td><?=$sumArray[$i*6+2]?></td> <!--상영시간표들-->
+                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*6+3]?>[<?=$sumArray[$i*6+4]?>]</td> <!--회차수-->
+                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*6+5]?></td> <!--총좌석수-->
                     <?
-                    if  ($sumArray[$i*5+5] != 0)
+                    if  ($sumArray[$i*6+5] != 0)
                     {
-                        ?><td style="vertical-align: top;" class="ty2"><?=number_format(round( ($sumArray[$i*5+5] - $sumArray[$i*5+2]) / $sumArray[$i*5+5] * 100.0, 1),1)?>%</td><!--예매율--><?
+                        ?><td style="vertical-align: top;" class="ty2"><?=number_format(round( ($sumArray[$i*6+5] - $sumArray[$i*6+2]) / $sumArray[$i*6+5] * 100.0, 1),1)?>%</td><!--예매율--><?
                     }
                     else
                     {

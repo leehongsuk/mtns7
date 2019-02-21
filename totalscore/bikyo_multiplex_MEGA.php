@@ -510,11 +510,11 @@
                                 <td style="vertical-align: top;" class="ty2"><?=$lst_sumtotalseatcount?></td>
                                 <td style="vertical-align: top;" class="ty2"><?=$lst_BookingRate?></td>
                                 <?
-								$sumArray[$i*4+0] += ($numRoom>0)?1:0 ;
-                                $sumArray[$i*4+1] += $numRoom ;
-                                $sumArray[$i*4+2] += $sumSumSeat ;
-                                $sumArray[$i*4+3] += $sumInningTot ;
-                                $sumArray[$i*4+4] += $sumSumTotalSeat ;
+								$sumArray[$i*5+0] += ($numRoom>0)?1:0 ;
+                                $sumArray[$i*5+1] += $numRoom ;
+                                $sumArray[$i*5+2] += $sumSumSeat ;
+                                $sumArray[$i*5+3] += $sumInningTot ;
+                                $sumArray[$i*5+4] += $sumSumTotalSeat ;
                             }
                         }
                     ?>
@@ -529,14 +529,14 @@
                 for ($i = 0 ; $i < sizeof($arrCode) ; $i++)
                 {
                     ?>
-                    <td><?=$sumArray[$i*4+1]?></td> <!--상영관명-->
-                    <td colspan="20"><?=$sumArray[$i*4+2]?></td> <!--상영시간표들-->
-                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*4+3]?></td> <!--회차수-->
-                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*4+4]?></td> <!--총좌석수-->
+                    <td><?=$sumArray[$i*5+1]?></td> <!--상영관명-->
+                    <td colspan="20"><?=$sumArray[$i*5+2]?></td> <!--상영시간표들-->
+                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*5+3]?></td> <!--회차수-->
+                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*5+4]?></td> <!--총좌석수-->
                     <?
-                    if  ($sumArray[$i*4+4] != 0)
+                    if  ($sumArray[$i*5+4] != 0)
                     {
-                        ?><td style="vertical-align: top;" class="ty2"><?=number_format(round( ($sumArray[$i*4+4] - $sumArray[$i*4+2]) / $sumArray[$i*4+4] * 100.0, 1),1)?>%</td><!--예매율--><?
+                        ?><td style="vertical-align: top;" class="ty2"><?=number_format(round( ($sumArray[$i*5+4] - $sumArray[$i*5+2]) / $sumArray[$i*5+4] * 100.0, 1),1)?>%</td><!--예매율--><?
                     }
                     else
                     {
@@ -587,15 +587,15 @@
                         <?
                     }
                     ?>
-                    <td><?=$sumArray[$i*4+0]?></td> <!--극장수-->
-                    <td><?=$sumArray[$i*4+1]?></td> <!--스크린수-->
-                    <td><?=$sumArray[$i*4+2]?></td> <!--상영시간표들-->
-                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*4+3]?></td> <!--회차수-->
-                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*4+4]?></td> <!--총좌석수-->
+                    <td><?=$sumArray[$i*5+0]?></td> <!--극장수-->
+                    <td><?=$sumArray[$i*5+1]?></td> <!--스크린수-->
+                    <td><?=$sumArray[$i*5+2]?></td> <!--상영시간표들-->
+                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*5+3]?></td> <!--회차수-->
+                    <td style="vertical-align: top;" class="ty2"><?=$sumArray[$i*5+4]?></td> <!--총좌석수-->
                     <?
-                    if  ($sumArray[$i*4+4] != 0)
+                    if  ($sumArray[$i*5+4] != 0)
                     {
-                        ?><td style="vertical-align: top;" class="ty2"><?=number_format(round( ($sumArray[$i*4+4] - $sumArray[$i*4+2]) / $sumArray[$i*4+4] * 100.0, 1),1)?>%</td><!--예매율--><?
+                        ?><td style="vertical-align: top;" class="ty2"><?=number_format(round( ($sumArray[$i*5+4] - $sumArray[$i*5+2]) / $sumArray[$i*5+4] * 100.0, 1),1)?>%</td><!--예매율--><?
                     }
                     else
                     {

@@ -39,6 +39,10 @@
             <li><a href='bikyo_table2.php?PlayDate=<?=$BaseDate_?>'>● 경쟁영화 회차비교표 2</a></li>
             <li><a href='bikyo_table3.php?PlayDate=<?=$BaseDate_?>'>● 경쟁영화 회차비교표 3</a></li>
             <li><a href='bikyo_table_All.php?PlayDate=<?=$BaseDate_?>'>● 경쟁영화 회차비교표 ALL</a></li>
+            <li><a href='#'>--------------------------------------------</a></li>
+            <li><a href='bikyo_multiplex_CGV.php?PlayDate=<?=$BaseDate_?>'>● CGV 회차비교표</a></li>
+            <li><a href='bikyo_multiplex_LOTTE.php?PlayDate=<?=$BaseDate_?>'>● LOTTE 회차비교표</a></li>
+            <li><a href='bikyo_multiplex_MEGA.php?PlayDate=<?=$BaseDate_?>'>● MEGA 회차비교표</a></li>
          </ul>
       </li>
       <!--
