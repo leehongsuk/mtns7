@@ -310,6 +310,8 @@
 }
 
 
+
+
 /* 폰트설정 */
 .t3 {font-size:14px; font-family:'돋움체';}
 .t3 h3 {font-size:1.69em;margin-bottom:0.75em;color:#323232;letter-spacing:-0.05em;}
@@ -329,6 +331,10 @@
 .t3 td.ty3{color:#e72744;font-weight:bold}
 .t3 td.ty4{color:#e72744;}
 .t3 td.ty5{text-align:center;}
+
+table.tm {font-size:14px;letter-spacing:0em;border-top:1px solid #37315d;border-bottom:1px solid #a0a0a0;border-left:1px solid #37315d;border-right:1px solid #a0a0a0;border-spacing:1;border-collapse:collapse; line-height:18px;}
+th.tm {padding:1px 3px 1px 3px; text-align:center; background:#f4f4f4;}
+td.tm {padding:1px 3px 1px 3px; text-align:center;}
 
 button {
   -webkit-box-shadow:rgba(0,0,0,0.1) 0 1px 0 0;

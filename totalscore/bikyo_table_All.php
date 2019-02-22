@@ -474,7 +474,7 @@
                                                   AND a.`Date`     = '$PlayDate'
                                                   AND a.MovieCd    = '$MovieCd'
                                              GROUP BY a.ScrnNm
-                                          " ; //echo "<br>".iconv("EUC-KR", "UTF-8",$sQuery);
+                                          " ; // if ($sTheatherCode=="001016")  //echo "<br>".iconv("EUC-KR", "UTF-8",$sQuery);
                                 $QryKoficPlaying = mysql_query($sQuery,$connect) ;
                                 while  ($ArrKoficPlaying = mysql_fetch_array($QryKoficPlaying))
                                 {
