@@ -203,20 +203,44 @@
             {
                 include "inc/Menu.inc";
             ?>
-                <form name="frmMain" method="get" action="<?=$_SERVER['PHP_SELF']?>" >
-                    <input type="hidden" name="Ranks" />
-                    <br>
-                    년월일: <input type="text" name="PlayDate" class="datepicker" value="<?=$PlayDate?>" onchange="datepicker_change()">
-                    <button name="start" onclick="start_click()">집계</button>
+            <form name="frmMain" method="get" action="<?=$_SERVER['PHP_SELF']?>" >
+                <input type="hidden" name="Ranks" />
+                <div class="t3" >
+                <table border="1">
+                <tr style="height:50px;">
+                    <th style="width:70px;">기준일</th>        
+                    <td>
+                        <input type="text" name="PlayDate" class="datepicker" value="<?=$PlayDate?>" onchange="datepicker_change()">
+                        <button name="start" onclick="start_click()">집계</button>
+                    </td>
+                    <th style="width:70px;">최근자료</th>
+                    <td><?      
+                    $sQuery = "   SELECT * 
+                                    FROM wrk_history  
+                                ORDER BY StatTime DESC
+                                    LIMIT 1
+                            " ; //echo "<br>".iconv("EUC-KR","UTF-8",$sQuery); ;   // 극장리스트를 구한다.
+                    $QryHistory = mysql_query($sQuery,$connect) ;
+                    if  ($ArrHistory = mysql_fetch_array($QryHistory))
+                    {
+                        $EndTime  = $ArrHistory["EndTime"] ;
+                        ?>
+                        <?=$EndTime?>
+                        <?
+                    }
+                    ?>
+                    </td>
                     <?
                     if  ($Ranks != null)
                     {
-                    ?><a href=# onclick="toexel_click();"><img src="../mtnscokr/exel.gif" width="32" height="32" border="0"></a><?
+                        ?><td><a href=# onclick="toexel_click();"><img src="../mtnscokr/exel.gif" width="32" height="32" border="0"></a></td><?
                     }
                     ?>
-                    <br>
-                </form>
-                <br>
+                </tr>                
+                </table>      
+                </div>        
+            </form>
+            <br>
             <?
             }
             else
