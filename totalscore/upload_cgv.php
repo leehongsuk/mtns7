@@ -1,4 +1,6 @@
 <?
+    // 파이썬으로 CGV 업로드
+
     set_time_limit(0) ;
 
     function Delete_cgv_movies($_connect)
@@ -290,6 +292,9 @@
         }
     }
     $noslash = stripcslashes( $_POST['ticketingdata'] ); // \" -> "
+
+    $sQuery = "  UPDATE wrk_history_multi SET CGV_Time = '".date("Y-m-d H:i:s")."' " ; //echo iconv("EUC-KR", "UTF-8",$sQuery);
+    mysql_query($sQuery,$_connect) ;
 
     mysql_close($connect) ;      // {[데이터 베이스]} : 단절
 

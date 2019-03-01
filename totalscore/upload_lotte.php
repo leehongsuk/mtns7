@@ -1,4 +1,6 @@
     <?
+        // 파이썬으로 LOTTE 업로드
+
         set_time_limit(0) ;
 
         function Delete_lotte_moviedata($_connect)
@@ -283,6 +285,9 @@
             //Insert_lotte_ticketingdata($cinemaid,$roomid,$moviecode,$val[0],$val[1],$val[2],$val[3],$val[4],$val[5],$val[6],$val[7],$val[8],$val[9],$val[10],$connect);
         }
 
+        $sQuery = "  UPDATE wrk_history_multi SET LOTTE_Time = '".date("Y-m-d H:i:s")."' " ; //echo iconv("EUC-KR", "UTF-8",$sQuery);
+        mysql_query($sQuery,$connect) ;
+    
         mysql_close($connect) ;      // {[데이터 베이스]} : 단절
 
     ?>

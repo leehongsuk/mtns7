@@ -43,6 +43,9 @@
 <body>
 Reading!!<br>
 <?
+    echo "<br/>시작 일시 : ". date("Y-m-d H:i:s")."<br/>";
+    $JobStart = date("Y-m-d H:i:s") ;
+
     $JOBS = array("A","B","C","D","E");
     //$JOBS = array("B");  // 부분적으로 실행할때(디버깅용)
 
@@ -286,7 +289,7 @@ Reading!!<br>
                      {
                          //echo "<br>".$key.":".$value ;
 
-                         if  ($key == "scrnNm")   { $scrnNm = iconv("UTF-8","EUC-KR",$value) ;   }
+                         if  ($key == "scrnNm")   { $scrnNm = str_replace("&amp;", "&", iconv("UTF-8","EUC-KR",$value));    }
                          if  ($key == "movieCd")  { $movieCd = $value ;  }
                          if  ($key == "movieNm")  { $movieNm = iconv("UTF-8","EUC-KR",$value) ;  }
                          if  ($key == "showTm")
@@ -825,6 +828,17 @@ Reading!!<br>
     mysql_query($sQuery,$connect) ;
 
     $sQuery = "DELETE FROM kofic_showtime  WHERE Date < '$DelDate' " ;//echo "<br>".iconv("EUC-KR","UTF-8",$sQuery); ;
+    mysql_query($sQuery,$connect) ;
+
+    echo "<br/>완료 일시 : ". date("Y-m-d H:i:s")."<br/>";
+    $JobEnd = date("Y-m-d H:i:s") ;
+
+    $sQuery = "INSERT INTO wrk_history 
+                    VALUES ( '".$_SERVER['REMOTE_ADDR']."'
+                            ,'".$JobStart."'
+                            ,'".$JobEnd."'
+                            )
+                " ; //echo "<br><br>".$p." Page - ".iconv("EUC-KR","UTF-8",$sQuery);
     mysql_query($sQuery,$connect) ;
 
 

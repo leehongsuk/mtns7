@@ -1,4 +1,6 @@
 <?
+    // 파이썬으로 MAGE 업로드
+
     set_time_limit(0) ;
 
     function Delete_mega_movies($_connect)
@@ -309,6 +311,8 @@
 
     }
 
+    $sQuery = "  UPDATE wrk_history_multi SET MEGA_Time = '".date("Y-m-d H:i:s")."' " ; //echo iconv("EUC-KR", "UTF-8",$sQuery);
+    mysql_query($sQuery,$connect) ;
 
     mysql_close($connect) ;      // {[데이터 베이스]} : 단절
 
